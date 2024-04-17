@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="architecture.png" alt="Dealerships Django Website" width="180">
+  <img src="architecture.png" alt="Dealerships Django Website" width="460">
 </p>
 
 <h1 align="center"> Dealerships Django Website</h>
@@ -110,25 +110,25 @@ The final capstone project for this course consists of several steps. The projec
 
 ### 1.Clone the Repository
 
-git clone https://github.com/fairytalesbrand/e-commerce-webapp-laravel.git
+git clone https://github.com/nattalliit/xrwvm-ibm-fullstack_developer_capstone.git
 cd /home/project/xrwvm-fullstack_developer_capstone/server
 
 ### 2.Run the following to set up the Django environment
-
+```sh
 cd /home/project/xrwvm-fullstack_developer_capstone/server
 pip install virtualenv
 virtualenv djangoenv
 source djangoenv/bin/activate
 
 ### 3.Install the required packages by running the following command
-
+```sh
 cd /home/project/xrwvm-fullstack_developer_capstone/server
 pip install virtualenv
 virtualenv djangoenv
 source djangoenv/bin/activate
 
 ### 4.Open a new terminal and build the front end as before
-
+```sh
 cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
 npm install
 npm run build
