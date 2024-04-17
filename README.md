@@ -109,13 +109,13 @@ The final capstone project for this course consists of several steps. The projec
 ## Configuration
 
 ### 1.Clone the Repository
-
+```sh
 git clone https://github.com/nattalliit/xrwvm-ibm-fullstack_developer_capstone.git
-cd /home/project/xrwvm-fullstack_developer_capstone/server
-
+cd /home/project/xrwvm-ibm-fullstack_developer_capstone/server
+```
 ### 2.Run the following to set up the Django environment
 ```sh
-cd /home/project/xrwvm-fullstack_developer_capstone/server
+pip install django
 pip install virtualenv
 virtualenv djangoenv
 source djangoenv/bin/activate
