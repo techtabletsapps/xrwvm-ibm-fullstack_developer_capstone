@@ -108,29 +108,29 @@ The final capstone project for this course consists of several steps. The projec
 
 ## Configuration
 
-### 1.Clone the Repository
+### 1. Clone the Repository
 ```sh
 git clone https://github.com/nattalliit/xrwvm-ibm-fullstack_developer_capstone.git
 cd /home/project/xrwvm-ibm-fullstack_developer_capstone/server
 ```
-### 2.Run the following to set up the Django environment
+### 2. Run the following to set up the Django environment
 ```sh
 pip install django
 pip install virtualenv
 virtualenv djangoenv
 source djangoenv/bin/activate
 ```
-### 3.Install the required packages by running the following command
+### 3. Install the required packages by running the following command
 ```sh
 python3 -m pip install -U -r requirements.txt
 ```
-### 4.Run the following command to perform model migration
+### 4. Run the following command to perform model migration
 ```sh
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
 ```
-### 5.Open a new terminal and build the front end as before
+### 5. Open a new terminal and build the front end as before
 ```sh
 cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
 npm install
