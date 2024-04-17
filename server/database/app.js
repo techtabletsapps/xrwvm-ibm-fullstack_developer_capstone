@@ -56,20 +56,85 @@ app.get('/fetchReviews/dealer/:id', async (req, res) => {
   }
 });
 
-// Express route to fetch all dealerships
+
+
+
+const express = require('express');
+const { MongoClient, ObjectId } = require('mongodb');
+
+const app = express();
+const port = 3000;
+
+// Connection URL
+const url = 'mongodb://localhost:27017';
+const dbName = 'dealershipDB';
+
+
 app.get('/fetchDealers', async (req, res) => {
-//Write your code here
-});
-
-// Express route to fetch Dealers by a particular state
+    const client = new MongoClient(url);
+  
+    try {
+      await client.connect();
+      const db = client.db(dbName);
+  
+      const dealers = await db.collection('dealers').find({}).toArray();
+  
+      res.json(dealers);
+    } catch (err) {
+      console.error('Error fetching dealers:', err);
+      res.status(500).send('Internal Server Error');
+    } finally {
+      await client.close();
+    }
+  });
+  
 app.get('/fetchDealers/:state', async (req, res) => {
-//Write your code here
-});
-
-// Express route to fetch dealer by a particular id
+    const client = new MongoClient(url);
+  
+    try {
+      await client.connect();
+      const db = client.db(dbName);
+  
+      const state = req.params.state;
+      const dealers = await db.collection('dealers').find({ state: state }).toArray();
+  
+      res.json(dealers);
+    } catch (err) {
+      console.error('Error fetching dealers by state:', err);
+      res.status(500).send('Internal Server Error');
+    } finally {
+      await client.close();
+    }
+  });
+  
 app.get('/fetchDealer/:id', async (req, res) => {
-//Write your code here
-});
+    const client = new MongoClient(url);
+  
+    try {
+      await client.connect();
+      const db = client.db(dbName);
+  
+      const id = req.params.id;
+      const dealer = await db.collection('dealers').findOne({ _id: new ObjectId(id) });
+  
+      if (!dealer) {
+        return res.status(404).send('Dealer not found');
+      }
+  
+      res.json(dealer);
+    } catch (err) {
+      console.error('Error fetching dealer by ID:', err);
+      res.status(500).send('Internal Server Error');
+    } finally {
+      await client.close();
+    }
+  });
+  
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+
+
 
 //Express route to insert review
 app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
