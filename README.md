@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="architecture.png" alt="Dealerships Django Website" width="460">
+  <img src="architecture.png" alt="Dealerships Python-based Web Framework Website" width="460">
 </p>
 
-<h1 align="center"> Dealerships Django Website</h>
+<h1 align="center"> Dealerships Python-based Web Framework Website</h>
 
 <p align="center">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg">
@@ -34,14 +34,14 @@ The final capstone project for this course consists of several steps. The projec
 ### Local Setup
 
 1. **Run Locally**: Run the application locally.
-2. **User Management**: Add user management to the Django application.
+2. **User Management**: Add user management to the Python-based Web Framework application.
 
 ### Backend Services
 
 1. **Node.js Server**: Create a Node.js server to manage dealers and reviews using MongoDB and Dockerize it.
 2. **Deploy Sentiment Analyzer**: Deploy sentiment analyzer on Code Engine.
-3. **Django Models and Views**: Create Django models and views to manage car models and car makes.
-4. **Proxy Services**: Create Django proxy services and views to integrate dealers and reviews.
+3. **Python-based Web Framework Models and Views**: Create Python-based Web Framework models and views to manage car models and car makes.
+4. **Proxy Services**: Create Python-based Web Framework proxy services and views to integrate dealers and reviews.
 
 ### Dynamic Pages
 
@@ -59,7 +59,7 @@ The final capstone project for this course consists of several steps. The projec
 
 ### Technologies Used
 
-- **Django**: Web application framework
+- **Django**: Python-based Web application framework
 - **Node.js**: Backend server for managing dealers and reviews
 - **MongoDB**: Database for storing dealer and review data
 - **Docker**: Containerization for Node.js server
@@ -68,7 +68,7 @@ The final capstone project for this course consists of several steps. The projec
 
 ### Services
 
-#### Dealerships Website (Django Application)
+#### Dealerships Website (Python-based Web Framework Application)
 
 - **Microservices**:
   - `get_cars/`: Get list of cars
@@ -95,11 +95,11 @@ The final capstone project for this course consists of several steps. The projec
   - `/analyze/:text`: Analyze the sentiment of the text (returns positive, negative, or neutral)
 
 **Interaction**:
-- **Django Proxy Service**: Interacts with "Dealerships and Reviews Service" and "Sentiment Analyzer Service" to provide combined functionality within the Django application.
+- **Python-based Web Framework Proxy Service**: Interacts with "Dealerships and Reviews Service" and "Sentiment Analyzer Service" to provide combined functionality within the Python-based Web Framework application.
 
 ## Configuration Steps
 
-### Django Environment Setup
+### Python-based Web Framework Environment Setup
 
 1. **Navigate to Server Directory**:
    ```sh
@@ -113,7 +113,7 @@ The final capstone project for this course consists of several steps. The projec
 git clone https://github.com/nattalliit/xrwvm-ibm-fullstack_developer_capstone.git
 cd /home/project/xrwvm-ibm-fullstack_developer_capstone/server
 ```
-### 2. Run the following to set up the Django environment
+### 2. Run the following to set up the Python-based Web Framework environment
 ```sh
 pip install django
 pip install virtualenv
